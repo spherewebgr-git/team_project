@@ -20,14 +20,25 @@ class UsersSeeder extends Seeder
                 $password = Hash::make('@dmin!@#');
 
 
-                    $users[] = [
-                        'name'=>'administrator',
-                        'email' =>'administrator@teamproject.com',
-                        'remember_token'=>\Ramsey\Uuid\Uuid::uuid4(),
-                        'email_verified_at'=>Carbon::now(),
-                        'created_at'=>Carbon::now(),
-                        'updated_at'=>Carbon::now(),
-                        'password' => $password
+                    $users = [
+                        [
+                            'name'=>'administrator',
+                            'email' =>'administrator@teamproject.com',
+                            'remember_token'=>\Ramsey\Uuid\Uuid::uuid4(),
+                            'email_verified_at'=>Carbon::now(),
+                            'created_at'=>Carbon::now(),
+                            'updated_at'=>Carbon::now(),
+                            'password' => $password,
+                        ],
+                        [
+                            'name'=>'Nick Jameson',
+                            'email' =>'n.jameson@teamproject.com',
+                            'remember_token'=>\Ramsey\Uuid\Uuid::uuid4(),
+                            'email_verified_at'=>Carbon::now(),
+                            'created_at'=>Carbon::now(),
+                            'updated_at'=>Carbon::now(),
+                            'password' => $password,
+                        ]
                     ];
 
 
