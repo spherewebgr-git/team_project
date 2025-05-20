@@ -39,7 +39,7 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/simplebar/simplebar.css') }}">
 
         @yield('css')
-        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/slyle.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 
     </head>
     <body class="font-sans text-gray-900 antialiased">

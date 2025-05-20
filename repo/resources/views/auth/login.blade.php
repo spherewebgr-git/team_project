@@ -1,46 +1,91 @@
 @extends('layouts.guest')
 
 @section('content')
-    <!-- login page start-->
-    <div class="container-fluid p-0">
-        <div class="row m-0">
-            <div class="col-12 p-0">
-                <div class="login-card login-dark">
-                    <div>
-                        <div><a class="logo" href="index.html">
-                                <img class="img-fluid for-light" src="{{asset('assets/images/logo.png')}}" alt="looginpage"></a>
+    <div class="app-wrapper d-block">
+        <!-- Body main section starts -->
+        <div class="main-container">
+            <!-- lock_screen start -->
+            <div class="container">
+                <div class="row main-content-box">
+                    <div class="col-lg-7 image-content-box d-none d-lg-block">
+                        <div class="form-container">
+                            <div class="signup-content mt-4">
+                  <span>
+                    <img alt="avatar" class="img-fluid " src="../assets/images/logo/1.png">
+                  </span>
+                            </div>
+                            <div class="signup-bg-img">
+                                <img alt="avatar" class="img-fluid" src="../assets/images/login/06.png">
+                            </div>
                         </div>
-                        <div class="login-main">
-                            <form method="POST" action="{{ route('login') }}" class="theme-form" >
+                    </div>
+                    <div class="col-lg-5 form-content-box">
+                        <div class="form-container">
+                            <form class="app-form" method="post" action="{{route('login')}}">
                                 @csrf
-                                <h4>Sign in to account </h4>
-                                <p>Enter your email & password to login</p>
-                                <div class="form-group">
-                                    <label class="col-form-label">Email Address</label>
-                                    <input class="form-control" type="email" name="email" required="">
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-form-label">Password </label>
-                                    <div class="form-input position-relative">
-                                        <input class="form-control" type="password" name="password" required="">
-                                        <div class="show-hide"> <span class="show"></span></div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="mb-3 user-screen">
+                                            <div class="w-90 h-90 b-r-15 d-flex-center overflow-hidden text-bg-primary">
+                                                <img alt="avatar" class="img-fluid" src="../assets/images/avatar/14.png">
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="form-group mb-0">
-                                    <div class="checkbox p-0">
-                                        <input id="checkbox1" type="checkbox">
-                                        <label class="text-muted" for="checkbox1">Remember password</label>
-                                    </div>
-                                    <div class="text-end mt-3">
-                                        <button class="btn btn-primary btn-block w-100" type="submit">Sign in</button>
-                                    </div>
-                                </div>
 
+                                    <div class="col-12">
+                                        <div class="mb-5 text-center text-lg-start">
+                                            <h2 class="text-white f-w-600">Lock <span class="text-dark">Screen</span></h2>
+                                            <p>Hello enter your password to unlock the screen</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="email" placeholder="Enter Your Email"
+                                                   required=""
+                                                   type="email">
+                                            <label class="form-label" for="email">Email</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+
+
+                                            <input class="form-control" id="password" placeholder="Enter Your Password"
+                                                   required=""
+                                                   type="password">
+                                            <label class="form-label" for="password">Password</label>
+
+                                            <p class="text-white f-s-12 mt-2">Enter Your Password to View your Screen</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check d-flex align-items-center gap-2 mb-3">
+                                            <input class="form-check-input w-25 h-25" id="checkDefault" type="checkbox"
+                                                   value="">
+                                            <label class="form-check-label text-white mt-1 f-s-16 text-dark"
+                                                   for="checkDefault">
+                                                Remember me
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                       <button type="submit" class="btn btn-primary btn-lg w-100">login</button>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- lock_screen end -->
+
         </div>
+        <!-- Body main section ends -->
     </div>
+
+    <!-- latest jquery-->
+    <script src="{{asset('assets/js/jquery-3.6.3.min.js')}}"></script>
+
+    <!-- Bootstrap js-->
+    <script src="{{asset('assets/vendor/bootstrap/bootstrap.bundle.min.js')}}"></script>
+
 @endsection
